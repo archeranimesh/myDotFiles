@@ -47,4 +47,17 @@ export PS1
 export LC_ALL=en_US.UTF-8
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-alias ls="ls -Gp"
+#alias ls="ls -Gpltrah"
+
+# https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # linux
+    echo $OSTYPE;
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OS
+    source ~/.bashrc;
+else
+    # unknown
+    echo $OSTYPE;
+fi
+
