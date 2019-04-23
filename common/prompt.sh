@@ -1,5 +1,20 @@
-# https://apple.stackexchange.com/questions/33677/how-can-i-configure-mac-terminal-to-have-color-ls-output
+#!/bin/bash
 
+# https://stackoverflow.com/questions/192319/how-do-i-know-the-script-file-name-in-a-bash-script
+# echo
+# echo "# arguments called with ---->  ${@}     "
+# echo "# \$1 ---------------------->  $1       "
+# echo "# \$2 ---------------------->  $2       "
+# echo "# path to me --------------->  ${0}     "
+# echo "# parent path -------------->  ${0%/*}  "
+# echo "# my name ------------------>  ${0##*/} "
+# echo
+# echo "# BASH_SOURCE   ${BASH_SOURCE}"
+
+
+echo "[AniB]: common/prompt.sh"
+
+# https://apple.stackexchange.com/questions/33677/how-can-i-configure-mac-terminal-to-have-color-ls-output
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"
 COLOR_GREEN="\033[0;32m"
@@ -47,17 +62,5 @@ export PS1
 export LC_ALL=en_US.UTF-8
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-#alias ls="ls -Gpltrah"
-
-# https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    # linux
-    echo $OSTYPE;
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    # Mac OS
-    source ~/.bashrc;
-else
-    # unknown
-    echo $OSTYPE;
-fi
-
+#echo "$SOURCE"
+#echo "$DIR"
