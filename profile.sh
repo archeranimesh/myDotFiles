@@ -28,19 +28,14 @@ source $DIR/common/history.sh
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # linux
-    echo $OSTYPE;
     source $DIR/ubuntu/profile.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OS
-    echo $OSTYPE;
     source $DIR/mac/profile.sh
 else
     # unknown
     echo $OSTYPE;
 fi
-
-#echo "$SOURCE"
-#echo "$DIR"
 
 
 # >>> conda initialize >>>
