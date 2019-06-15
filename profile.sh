@@ -1,7 +1,4 @@
 #!/bin/bash
-
-echo "[AniB]: profile.sh"
-
 # https://stackoverflow.com/questions/59895/get-the-source-directory-of-a-bash-script-from-within-the-script-itself
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -44,4 +41,20 @@ fi
 
 #echo "$SOURCE"
 #echo "$DIR"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/arunab/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/arunab/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/arunab/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/arunab/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

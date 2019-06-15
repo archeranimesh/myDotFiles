@@ -10,11 +10,8 @@
 # echo "# my name ------------------>  ${0##*/} "
 # echo
 # echo "# BASH_SOURCE   ${BASH_SOURCE}"
-
-
-echo "[AniB]: common/prompt.sh"
-
 # https://apple.stackexchange.com/questions/33677/how-can-i-configure-mac-terminal-to-have-color-ls-output
+
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"
 COLOR_GREEN="\033[0;32m"
