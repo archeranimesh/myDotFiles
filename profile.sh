@@ -24,6 +24,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 # Source the common files
 source $DIR/common/prompt.sh
 source $DIR/common/history.sh
+source $DIR/common/git.sh
 
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
